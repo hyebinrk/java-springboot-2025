@@ -26,12 +26,14 @@
     6. Spring Boot - Spring의 단점을 최소화. 설정을 간결화
 
 - Spring Boot
+    - https://spring.io/projects/spring-boot
     - Spring 기술을 그대로 사용(마이그레이션이 간단)
     - JPA 기술을 사용하면 ERD나 DB설계를 하지 않고도 손쉽게 DB를 생성 . DB연동도 쉬움
     - Tomcat Webserver가 내장!(설치 필요없음)
     - 서포트하는 기능 다수 존재(개발을 쉽게 도와줌)
     - 테스트용 JUnit, 로그용 Log4J2 모두 포함(설치 필요없음)
     - 프론트엔드를 다양하게 지원. JSP, **Thymeleaf**, Mustache 등
+    - React 등의 자바스크립트 프론트엔드와 연계해서 풀스택 개발 가능 
     - MVC(Model View Controller)로 영역을 분리. 각 부분별로 따로 개발
 
 - MVC
@@ -67,6 +69,38 @@
 ### Java 기본 실행
 - VS Code에서 명령팔레트 실행(Ctrl + Shift + p)
     - Java create
+        1. build tools > Maven
+        2. No ArchType 선택
+        3. Group ID 입력(com.example)
+        4. Artifact ID 입력(demo)
+        5. 저장위치 결정
+
+### Spring Boot 설정
+- Visual Studio Code 확장 설치
+    - Spring 검색
+        - Spring Boot Extension Pack 설치(추가 3개 확장 같이 설치됨)
+    - Gradle(빌드툴) 검색
+        - Gradle for Java 설치
+
+### Spring Boot 기본 실행(Java 프로젝트)
+- VS CODE에서 명령팔레트 실행
+    - Spring Initializr: Create a Maven Project
+    - Specify Spring Boot version: 3.3.10 선택
+    - Specify project language: Java
+    - Input Group Id: 본인아이디 입력/com.ysrk (각자 설정할 것)
+    - Input Artifact Id: spring01
+    - Specify packaging type: Jar(Java archive, 압축파일)
+    - Specify Java version: 17
+    - Choose dependencies: Selected 0 dependencies
+    - 저장위치 선택
+    - **새 창 열기** - Spring Boot 프로젝트가 루트폴더가 된 개발환경
+
+- 실행방법
+    - 코드 작성
+    - Spring Boot Dashboard > Apps > 앱 실행
+
+- 기초문법
+    - [JAVA기초문법](./JAVA_BASIC.md)
 
 ## 2일차
 
