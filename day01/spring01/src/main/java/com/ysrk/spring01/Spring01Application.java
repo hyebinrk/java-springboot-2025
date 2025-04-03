@@ -11,7 +11,7 @@ public class Spring01Application {
 
 		System.out.println("Hello, Spring Boot!");
 
-		// 변수연습
+		// 변수, 자료형 연습
 		int account = 1000000;
 		System.out.println("계좌금액은 " + account);
 		float pi = 3.141592F;
