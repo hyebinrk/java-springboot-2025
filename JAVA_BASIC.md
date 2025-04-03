@@ -326,10 +326,23 @@
     - private : 같은 클래스 내에서만 접근 가능
     - protected : 같은 패키지 내 또는 다른 패키지의 자식 클래스에서만 접근 가능
     - default : (키워드 생략 가능)같은 패키지 내에서만 접근 가능
+- 사용빈도 : public > default > private > protected(getName을 하면 쓸 수 있기 때문에 상대적으로 잘 안 씀)
 
 #### Getter/Setter
-- 내일
+- 캡슐화를 제대로 하기위한 코딩방법
+
+    ```java
+    ppoppy.age = -19; // 이런 현상을 막아야 함!
+    ```
+
+    - private 접근제어자로 멤버변수 선언
+    - Getter메서드/Setter메서드의 접근제어를 public, default, protcted 등으로 설정
+    - Getter : 값을 리턴. 포맷팅을 해서 리턴 가능, get 접두어로 시작하는 메서드
+        - get + 멤버변수명으로 메서드명 생성
+    - Setter : 중요! 잘못된 값이 들어가지 않도록 막아주는 메서드.
+        - set + 멤버변수명(입력파라미터) 형태로 생성
+        - 내부로직으로 입력값 필터링
 
 #### Object 클래스
-- 내일 
+- 
 
