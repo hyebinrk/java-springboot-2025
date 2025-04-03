@@ -1,4 +1,5 @@
 package com.ysrk.spring05;
+import java.lang.Object;
 
 // 부모클래스 동물 
 public class Animal { // public : 어디서든지 불러서 사용 가능

@@ -26,6 +26,7 @@ public class Spring05Application {
 		Dog choonsam = new Dog();				
 		choonsam.setName("춘삼");
 		choonsam.cry();
+		System.out.println(choonsam.getClass().getSimpleName()); // Object 클래스 메서드를 사용가능
 
 		
 	}
