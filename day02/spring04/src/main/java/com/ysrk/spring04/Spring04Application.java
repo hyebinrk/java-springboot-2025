@@ -1,3 +1,4 @@
+
 package com.ysrk.spring04;
 
 import org.springframework.boot.SpringApplication;
@@ -10,8 +11,8 @@ public class Spring04Application {
 		SpringApplication.run(Spring04Application.class, args);
 
 		// 클래스 사용
-		NewCar peugeot = new NewCar("206cc", "peugeot", 2016);	
-		
+		NewCar peugeot = new NewCar("206cc", "peugeot", 2016);		
+
 		NewCar avante = new NewCar();
 		avante.company = "현대자동차";
 		avante.color = "blue";
@@ -22,14 +23,13 @@ public class Spring04Application {
 		peugeot.doAccelerate();
 		avante.doAccelerate();
 		peugeot.turnLeft();
-		avante.turnright();
+		avante.turnRight();
 		peugeot.doBreak();
 		avante.doBreak();
 		avante.changeGear();
 		avante.doAccelerate();
 
 		System.out.println(peugeot);
-		System.out.println(avante);		
+		System.out.println(avante);
 	}
-
 }

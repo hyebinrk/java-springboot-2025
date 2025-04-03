@@ -1,4 +1,4 @@
-package com.rkys.spring02;
+package com.ysrk.spring02;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

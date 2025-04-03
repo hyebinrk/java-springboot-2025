@@ -41,7 +41,7 @@ public class Spring01Application {
 			num++; // num을 1씩 증가
 		}
 
-		System.out.println("break/continue 종료!")
+		System.out.println("break/continue 종료!");
 	}
 
 }
