@@ -317,3 +317,19 @@
         // 부모 메서드를 오버라이딩
     }
 - [JAVA문법실습](./day02/spring05/src/main/java/com/ysrk/spring05/Spring05Application.java)
+
+#### 접근제어자
+- 클래스, 변수, 메서드 등에 어떤방식을 접근할건지를 정의하는 키워드
+- 객체지향의 특징 중 캡슐화를 위해서 사용
+- 접근제어자 분류
+    - public : 접근 제한이 없음. 누구나 접근 가능
+    - private : 같은 클래스 내에서만 접근 가능
+    - protected : 같은 패키지 내 또는 다른 패키지의 자식 클래스에서만 접근 가능
+    - default : (키워드 생략 가능)같은 패키지 내에서만 접근 가능
+
+#### Getter/Setter
+- 내일
+
+#### Object 클래스
+- 내일 
+
