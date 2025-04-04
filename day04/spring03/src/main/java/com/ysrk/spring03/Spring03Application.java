@@ -1,12 +1,14 @@
 package com.ysrk.spring03;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.Set;
 import java.util.Vector;
 
@@ -16,6 +18,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Spring03Application {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		SpringApplication.run(Spring03Application.class, args);
 
@@ -90,8 +95,28 @@ public class Spring03Application {
 		phones.put("010-9898-6890", "Galxy S24");
 		phones.put("010-6666-6622", "IPhone 11");
 
-		System.out.println(phones);
+		// 샘플 - 학생 네명의 국어, 영어, 수학, 미술, 체육 점수 합산/평균
+		List<Integer> std1 = Arrays.asList(96, 100, 55, 80, 70);
+		List<Integer> std2 = Arrays.asList(100, 100, 99, 95, 96);
+		List<Integer> std3 = Arrays.asList(50, 50, 40, 100, 90);
+		List<Integer> std4 = Arrays.asList(85, 85, 84, 86, 80);
 
-		System.out.println(phones.get("010-6666-662"));
+		Map<String, List<Integer>> students = new HashMap<>();
+		students.put("김은희", std1);
+		students.put("안정민", std2);
+		students.put("정서영", std3);
+		students.put("이경주", std4);
+
+		Scanner scan = new Scanner(System.in);
+		System.out.println("# 성적 조회할 학생 이름 입력 > ");
+		String inName = scan.next();
+
+		int sum = 0;
+		for (int score : students.get(inName)) { // "홍길동" -> [96, 100, 55, 80, 70]
+			sum += score;			
+		}		
+
+		System.out.println(inName + "학생의 성적 총점은 " sum + ", 평균은" + (sum/5));
+		
 	}
 }
