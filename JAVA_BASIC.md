@@ -419,12 +419,12 @@
 - 추가로 학습할 내용
 - 다형성, 상속, 캡슐화, 추상화
 
-#### 문자열
+#### 문자열 핸들링
 - [java.lang.String](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/String.html)
 - String
     - 컴퓨터 -> 숫자, 사람 -> 문자
 
-- [JAVA문법실습](./day03/spring03/src/main/java/com/ysrk/spring03/Spring03Application.java)
+- [JAVA문법실습](./day03/spring04/src/main/java/com/ysrk/spring04/Spring04Application.java)
 
 
 #### 시간타입 핸들링
@@ -432,7 +432,7 @@
 - time
     - 날짜와 시간을 처리할 때 사용
 
-- [JAVA문법실습](./day04/spring04/src/main/java/com/ysrk/spring04/Spring04Application.java)
+- [JAVA문법실습](./day04/spring01/src/main/java/com/ysrk/spring01/Spring01Application.java)
 
 
 
