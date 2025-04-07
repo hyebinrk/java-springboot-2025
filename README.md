@@ -83,6 +83,9 @@
         - Gradle for Java 설치
 
 ### Spring Boot 기본 실행(Java 프로젝트)
+- JDK버전과 Spring Boot Initializr에 선택하는 JDK버전이 일치해야함
+    - OS에 JDK버전이 17버전이면 17선택.
+
 - VS CODE에서 명령팔레트 실행
     - Spring Initializr: Create a Maven Project
     - Specify Spring Boot version: 3.3.10 선택
@@ -175,6 +178,105 @@
     - VS Code 재시작.
 
 ## 5일차
-- Spring Boot 시작작
+- Spring Boot 시작
+    - Spring Initializr: Create a Gradle project        
+    - Specify Spring Boot version: 3.4.4 선택
+    - Specify project language: Java
+    - Input Group Id: 본인아이디 입력/com.ysrk (각자 설정할 것)
+    - Input Artifact Id: spring03
+    - Specify packaging type: Jar(Java archive, 압축파일)
+    - Specify Java version: 17
+    - Choose dependencies: Selected 0 dependencies
+    - Spring Web
+    - 저장위치 선택
+    - **새 창 열기** - Spring Boot 프로젝트가 루트폴더가 된 개발환경
+
+- 기본설정
+    - application.properties에 `spring.output.ansi.enabled=always` 추가 
+
+- 포트번호
+    |프로토콜|포트번호|비고|
+    |:---|---:|:---|
+    |HTTP|80|웹 서버,서비스포트(보안취약)|
+    |FTP|21|웹을 통한 파일전송|
+    |TELNET|23|원격서버접속 서비스|
+    |SSH|22|보안강화된 텔넷|
+    |SMTP|25|메일 전송서비스|
+
+
+- 개발용 포트
+    - 포트는 중복 안 됨
+    - 8080포트를 사용하고 있으면 다른 포트로 변경해야 함!
+    - 포트 변경시 application.properties에 `server.port=8090` 추가
+
+- 웹브라우저 열기
+    - http://localhost:8090/ 오픈
+
+    <img src="./image/sb0006.png" width="700">
+
+- 접속위치 요청 처리
+    - 컨트롤러 생성
+        - HelloController 클래스 생성
+        - http://localhost:8090/hello
+
+    - 각 기능별로 패키지를 구분
+        - controller, model, 등...
+
+### 로그 출력
+- Log-back
+    - 스프링부트에 내장된 로그 모듈
+
+    - applicaiton.properties 내 로그설정
+
+    ```groovy
+    logging.level.root = info
+    logging.file.name = /logtest.log
+    ```
+
+    - 사용 시
+    ```java
+    // 클래스 내 작성
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    //메서드 내 사용
+    logger.info("hello URL 오픈!");
+    // 문제발생시 로그를 남길 때
+    logger.debug("디버그시 필요한 로그입니다.");
+    logger.trace("디버그시 필요한 로그예요.");
+    
+    logger.warn("경고표시 나타내는 로그입니다.");
+    logger.error("오류표시 나타내는 로그입니다.");
+    ``` 
+
+### 스프링부터 배너(중요도 없음)
+- resources 폴더에 banner.txt를 생성
+- 내용 추가
+- [Spring Boot Banner Generator 사이트](https://devops.datenkollektiv.de/banner.txt/index.html)
+- 배너제너레이터로 생성한 글자 복사 banner.txt 붙여넣기
+- 서버 재시작
+
+<img src="/image/sb0009.png" width=700>
+
+### 메인페이지 추가
+- resources/static/index.html 부터 시작 
+
+### 스프링부트 프로젝트구조
+<img src="./image/sb0010.png" width=700>
+
+- 각 폴더 구조
+    - .gradle ~ gradle : 그레이들, VSCode, 빌드 등에 필요한 폴더(설명필요X)
+    - src/main/java : 패키지와 자바 소스가 저장되는 위치
+    - com.hugo83.spring03 : vozlwl. vhfejfh rntjd
+        - HelloController 클래스에 접근하려면
+        - com.hugo83.spring03.controller.HelloController 접근해야 함
+    - Spring03Application.java : 시작프로그램
+    - src/main/resources : 자바파일 이외 HTML, CSS, JS, 환경파일 등 리소스파일 저장되는 위치
+        - `static` : CSS, OS, 이미지 파일 저장되는 곳
+        - `templates` : 스프링부트와 연계되는 HTML 파일 저장되는 곳
+        - `application.properties` : 프로젝트 환경설정 파일. 환경변수, DB설정
+    - src/test/java : JUnit 스프링부트 테스트도구 자바파링 저장되는 위치
+    - `build.gradle` : 그레이들 환경 파일. Groovy 기반으로 한 빌드도구. dependencies만 잘 구성하면 됨.
+    - gradlew.bat : 중간에 직접 그레이들 빌드를 할 때 사용하는 배치파일.
+    - settings.gradle : 고급 그레이들 설정. 손댈 일 없음
 
 ## 6일차 (06-26)
