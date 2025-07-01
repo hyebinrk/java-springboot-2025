@@ -590,3 +590,8 @@ implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 
 2. 레이아웃 템플릿 페이지 작성
 3. board_list.html에 적용
+
+
+https://github.com/user-attachments/assets/5e6c83ac-2b33-407d-bed0-2a8221b6fe16
+
+
