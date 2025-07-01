@@ -63,13 +63,13 @@ class BackboardApplicationTests {
 	@Test
 	void testSelectByTitle() {
 		Board board = this.boardRepository.findByTitle("두번째 게시글입니다.");
-		assertEquals(2L, board.getBno()); // 게시글 번호가 2번인지 확인
+		assertEquals(203L, board.getBno()); // 게시글 번호가 2번인지 확인
 	}
 
 	@Test // SELECT FROM LIKE
 	void testSelectByTitleLike() {
 		List<Board> boards = this.boardRepository.findByTitleLike("%게시글%");
-		assertEquals(6, boards.size()); // 제목이 "첫번째 게시글"로 시작하는 게시글이 1개인지 확인
+		assertEquals(2, boards.size()); // 제목이 "첫번째 게시글"로 시작하는 게시글이 1개인지 확인
 
 		Board board = boards.get(0); // 첫번째 게시글을 가져옴
 		assertEquals("첫번째 게시글입니다.", board.getTitle()); // 첫번째 게시글
@@ -77,12 +77,12 @@ class BackboardApplicationTests {
 
 	@Test // 삭제
 	void testDeleteLastOne() {
-		assertEquals(4, boardRepository.count()); // 삭제 전 게시글 수 확인
-		Optional<Board> opBoard = this.boardRepository.findById(1L);
+		assertEquals(2, boardRepository.count()); // 삭제 전 게시글 수 확인
+		Optional<Board> opBoard = this.boardRepository.findById(202L);
 		assertTrue(opBoard.isPresent()); // 게시글이 존재하는지 확인
 
 		Board board = opBoard.get();
 		this.boardRepository.delete(board); // 게시글 삭제
-		assertEquals(4, boardRepository.count()); // 삭제 후 게시글 수 확인
+		assertEquals(1, boardRepository.count()); // 삭제 후 게시글 수 확인
 	}
 }
