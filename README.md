@@ -574,14 +574,13 @@
 1. static/main.css : 전체에서 사용할 css 파일
 1. Bootstrap 적용
 
+   - http://getbootstrap.com Current v5.3.7 download 클릭
+   - http://github.com/twbs/icons/releases/tag/v1.13.1
 
-    - http://getbootstrap.com Current v5.3.7 download 클릭
-    - http://github.com/twbs/icons/releases/tag/v1.13.1
+1. board_detail.html : 부트스트랩 적용
 
-4. board_detail.html : 부트스트랩 적용
-
-5. 전체 HTML에 디자인 적용
-6. build.gradle에 thymeleaf-layout 의존성 추가
+1. 전체 HTML에 디자인 적용
+1. build.gradle에 thymeleaf-layout 의존성 추가
 
 ```gradle
 // Thymeleaf layout 의존성 추가. 250701. 신규추가. hbrk.
